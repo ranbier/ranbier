@@ -2,87 +2,98 @@
 
 # Jinsung Kim
 
-### Robotics Software Developer · Autonomous Systems · ROS 2
+### Robotics Systems Software Engineer
 
-ROS 2 기반 자율주행·수중로봇 시스템을 개발합니다.  
-센서 연동부터 위치 추정, 경로 추종, 시스템 모니터링까지 로봇 소프트웨어의 전체 흐름에 관심이 있습니다.
+**Algorithms → Communication → Hardware → Field Validation**
 
-<br/>
+[![Portfolio](https://img.shields.io/badge/Portfolio-dmdnot.com-111827?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dmdnot.com)
+[![GitHub](https://img.shields.io/badge/GitHub-ranbier-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ranbier)
 
-![ROS 2](https://img.shields.io/badge/ROS%202-22314E?style=flat-square&logo=ros&logoColor=white)
+</div>
+
+## About Me
+
+로봇 알고리즘과 통신 인터페이스, 실제 하드웨어 동작 사이를 연결하고 검증하는 소프트웨어 엔지니어입니다.
+
+- ROS 2 기반 자율주행·수중로봇 시스템 통합
+- C/C++ 기반 제어 및 하드웨어 인터페이스 구현
+- 로그, 텔레메트리, 오실로스코프와 계측기를 활용한 문제 분리
+- 시뮬레이션을 넘어 실제 플랫폼에서 반복 검증
+
+## Featured Work
+
+### 🌊 Autonomous Underwater Vehicle — System Integration
+
+> **2026 Iwakuni Underwater Robot Festival · Senior Division 3rd Place**
+
+- DVL, IMU, Depth 데이터를 결합한 EKF Localization 통합
+- Jetson–Pixhawk 간 ROS 2, MAVROS, MAVLink 통신 구성
+- YOLO 부표 인식과 자율 미션 상태 전이 연결
+- 소프트웨어와 독립적으로 8개 Thruster PWM을 차단하는 Hardware E-Stop 제작
+- 센서·알고리즘·추진기·전원을 분리 검증한 뒤 수조에서 통합 테스트
+
+[![AUV Repository](https://img.shields.io/badge/View_AUV_Repository-0077B5?style=flat-square&logo=github&logoColor=white)](https://github.com/2026-kmu-underwater-robot/auv)
+
+### 🚗 ERP-42 Autonomous Driving — Control & System Integration
+
+> **Software Team Lead · Jul 2024–Dec 2025 · 2025 Autonomous Driving Robot Race Grand Excellence Award / 2nd Place**
+
+- Dual u-blox F9P 기반 위치·헤딩 추정과 Localization 구성
+- MPC 경로 추종 및 ERP-42 차량 인터페이스 통합
+- 실제 차량 응답에 맞춰 MPC 가중치와 명령 발행 주기 튜닝
+- GPS covariance가 `0.000196`을 넘으면 속도를 낮추는 degraded operation 구현
+- 파라미터를 YAML로 분리해 재빌드 없이 현장 튜닝 가능하도록 개선
+
+[![Waypoint System](https://img.shields.io/badge/Waypoint_System-22C55E?style=flat-square&logo=github&logoColor=white)](https://github.com/ranbier/waypoint_system)
+[![Dual GPS Localization](https://img.shields.io/badge/Dual_GPS_Localization-22C55E?style=flat-square&logo=github&logoColor=white)](https://github.com/ranbier/dual_gps_robot_localization)
+[![MPC Path Tracking](https://img.shields.io/badge/MPC_Path_Tracking-22C55E?style=flat-square&logo=github&logoColor=white)](https://github.com/ranbier/mpc_pathtracking)
+
+### ⚡ 1/5 Scale EV — Digital-to-Analog Control Interface
+
+> **Autonomous Driving Competition Encouragement Award**
+
+- Arduino PWM을 RC Low-pass Filter를 통해 HENES T580용 아날로그 입력으로 변환
+- Steering 입력 전압 범위를 멀티미터로 측정
+- PWM 및 필터 출력 파형을 오실로스코프로 검증
+- 수동·자율 주행 코스 테스트를 반복해 조향 및 구동 실패 없이 완주
+
+### 🔧 MPC5604P — Register-Level Motor Control
+
+- GPIO, ADC, FlexPWM, eTimer를 레지스터 레벨에서 구성
+- Motor current PI 제어와 Encoder 기반 speed control 구현
+- 과열·과전압·단락 상황에서 PWM을 차단하는 protection logic 구현
+- FreeMaster와 오실로스코프로 전압·전류·속도 응답 검증
+
+## Publications
+
+- **First Author** — *A Real-Time Optimal Avoidance Path Generation Method for MPC-Based Autonomous Vehicles*, KSAE Spring Conference 2025
+- **Co-Author** — *Nonlinear MPC Path Tracking with Variable Steering-Angle Weights*, KSAE Spring Conference 2025
+- **Co-Author** — *Sequential Multi-Critic PPO and Critic Transfer for Autonomous Lane Following*, KSAE Fall Conference 2025
+
+## Tech Stack
+
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=111111)
+![ROS 2](https://img.shields.io/badge/ROS_2-22314E?style=flat-square&logo=ros&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![NVIDIA](https://img.shields.io/badge/Jetson-76B900?style=flat-square&logo=nvidia&logoColor=white)
 
-</div>
+`ROS 2` · `MAVROS` · `MAVLink` · `CAN` · `EKF` · `MPC` · `YOLO` · `Embedded C`
 
----
-
-## 👋 About Me
-
-- Building software for **autonomous robots and underwater vehicles**
-- Interested in **navigation, localization, motion control, and sensor integration**
-- Working mainly with **C++, Python, ROS 2, MAVROS, and MAVLink**
-- Contributing to the [2026 KMU Underwater Robot](https://github.com/2026-kmu-underwater-robot) organization
-
-## 🧭 Focus Areas
-
-| Area | What I work on |
-| --- | --- |
-| 🤖 Robotics Software | ROS 2 nodes, messages, launch systems, and package integration |
-| 🗺️ Navigation & Control | Waypoint tracking, path tracking, and model predictive control |
-| 📍 Localization | GPS-based localization and sensor data processing |
-| 🌊 Underwater Robotics | AUV communication, DVL integration, sonar processing, and monitoring |
-| ⚙️ Development | C++, Python, CMake, Docker, Git, and web-based interfaces |
-
-## 🚀 Selected Projects
-
-| Project | Description | Tech |
-| --- | --- | --- |
-| [AUV System](https://github.com/2026-kmu-underwater-robot/auv) | ROS 2-based software stack for an autonomous underwater vehicle | ROS 2 · Python · C++ |
-| [Waypoint System](https://github.com/ranbier/waypoint_system) | Waypoint-based navigation and control system | C++ · ROS 2 |
-| [Ping360 Motion Compensation](https://github.com/ranbier/ping360_motion_compensation) | Motion compensation for Ping360 sonar data | C++ |
-| [Dual GPS Robot Localization](https://github.com/ranbier/dual_gps_robot_localization) | Localization workflow using dual GPS measurements | C++ · ROS 2 |
-| [MPC Path Tracking](https://github.com/ranbier/mpc_pathtracking) | Model predictive control experiments for autonomous path tracking | C++ |
-| [AUV Web GUI](https://github.com/ranbier/kmu26_auv_web_gui) | Web-based interface for AUV monitoring and operation | Python · Web |
-
-## 🤝 Team Project
-
-### 2026 KMU Underwater Robot
-
-I contribute to a modular ROS 2 software ecosystem for an autonomous underwater vehicle. The project is organized across packages for vehicle control, communication, sensors, messages, and operator interfaces.
-
-[![Organization](https://img.shields.io/badge/GitHub-Organization-181717?style=flat-square&logo=github)](https://github.com/2026-kmu-underwater-robot)
-[![AUV Core](https://img.shields.io/badge/Project-AUV_Core-0A66C2?style=flat-square)](https://github.com/2026-kmu-underwater-robot/auv)
-[![Web GUI](https://img.shields.io/badge/Project-Web_GUI-3776AB?style=flat-square)](https://github.com/2026-kmu-underwater-robot/auv_web_gui)
-[![DVL](https://img.shields.io/badge/Sensor-DVL_A50-00897B?style=flat-square)](https://github.com/2026-kmu-underwater-robot/auv_dvl_a50)
-[![MAVROS](https://img.shields.io/badge/Integration-MAVROS-5C6BC0?style=flat-square)](https://github.com/2026-kmu-underwater-robot/auv_mavros)
-
-## 🛠️ Tech Stack
+## GitHub
 
 <div align="center">
 
-![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-
-</div>
-
-## 📊 GitHub Activity
-
-<div align="center">
-
-![Jinsung's GitHub stats](https://github-readme-stats.vercel.app/api?username=ranbier&show_icons=true&hide_border=true&rank_icon=github&theme=transparent)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ranbier&show_icons=true&hide_border=true&theme=transparent&rank_icon=github)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ranbier&layout=compact&hide_border=true&theme=transparent)
 
 </div>
 
 ---
 
 <div align="center">
-
-[![Repositories](https://img.shields.io/badge/Explore-All_Repositories-181717?style=for-the-badge&logo=github)](https://github.com/ranbier?tab=repositories)
-
+실제 로봇의 동작으로 검증되는 소프트웨어를 만듭니다.
 </div>
