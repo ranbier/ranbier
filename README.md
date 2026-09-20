@@ -1,3 +1,5 @@
+<img src="https://github.com/user-attachments/assets/fba52741-1421-4209-9b48-6d65ea4941b4" width="100%" alt="Snow-covered mountain road and tunnel" />
+
 <div align="center">
 
 # Jinsung Kim
